@@ -1,33 +1,61 @@
 package Logic;
 
 import java.util.ArrayList;
+import com.pi4j.io.gpio.*; ///LIBRERIA PARA LOS GPIO PI
+
+
+
 
 public class Cubo {
 
-	private Capa[] misCapas;
-	private ArrayList<Capa> Animacion;
+	private ArrayList<Animacion> seleccion;
+	private ArrayList<Animacion> misAnimaciones;
 	
-	public Cubo(Capa[] misCapas, ArrayList<Capa> animacion) {
+	public Cubo() {
 		super();
-		this.misCapas = misCapas;
-		Animacion = animacion;
+		this.seleccion = new ArrayList<Animacion>();
+		this.misAnimaciones = new ArrayList<Animacion>();
 	}
 
-	public Capa[] getMisCapas() {
-		return misCapas;
+	public ArrayList<Animacion> getMisAnimaciones() {
+		return misAnimaciones;
 	}
 
-	public void setMisCapas(Capa[] misCapas) {
-		this.misCapas = misCapas;
+	public void setMisAnimaciones(ArrayList<Animacion> misAnimaciones) {
+		this.misAnimaciones = misAnimaciones;
 	}
 
-	public ArrayList<Capa> getAnimacion() {
-		return Animacion;
+	public ArrayList<Animacion> getSeleccion() {
+		return seleccion;
 	}
 
-	public void setAnimacion(ArrayList<Capa> animacion) {
-		Animacion = animacion;
+	public void setSeleccion(ArrayList<Animacion> seleccion) {
+		this.seleccion = seleccion;
 	}
 	
+	
+	/*public Animacion BuscarAnimacionByName(int indice) {
+		Animacion aux = null;
+		int i = 0;
+		boolean Encontrado = false;
+		
+		if(!misAnimaciones.isEmpty()){
+			while(i<misAnimaciones.size() || Encontrado == true) {
+				if(misAnimaciones.get(indice)) {
+					aux = misAnimaciones.get(i);
+					Encontrado = true;
+				}
+			}
+		}
+		
+		return aux;
+	}*/
+	
+	
+//////////////////////////////////Parte Fundamental del Proyecto////////////////////////////////////////////////////////
+	
+	public void Multiplexación() {
+		
+	}
 	
 }

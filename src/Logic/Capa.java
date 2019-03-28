@@ -2,20 +2,34 @@ package Logic;
 
 public class Capa {
 
-	private Led[] misLed;
+	private boolean[] misLed;
 
 	public Capa() {
 		super();
-		this.misLed = new Led[64];
+		this.misLed = new boolean[64];
 	}
 
-	public Led[] getMisLed() {
+	public boolean[] getMisLed() {
 		return misLed;
 	}
 
-	public void setMisLed(Led[] misLed) {
+	public void setMisLed(boolean[] misLed) {
 		this.misLed = misLed;
 	}
+
+	public void modificadorLed(int ledElegido) {
+		
+		if(!misLed[ledElegido]) {
+			
+		misLed[ledElegido] = true;
+		}
+		else {
+			misLed[ledElegido] = false;
+		}
+	}
+	
+	
+
 	
 	
 
