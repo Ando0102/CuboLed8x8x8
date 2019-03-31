@@ -17,6 +17,7 @@ import java.awt.Font;
 import java.awt.Frame;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
@@ -317,8 +318,10 @@ public class InterfacePrincipal extends JFrame {
 		btnActualizar.setIcon(new ImageIcon("C:\\Users\\arman\\Downloads\\refresh_arrow_1546.png"));
 		btnActualizar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				cargaCapabyAnimacion();
+				System.out.println("Probando");
 				
-				EstadoDeLeds();
+				//EstadoDeLeds();
 				
 			}
 
@@ -1631,6 +1634,7 @@ public class InterfacePrincipal extends JFrame {
 				int ledelegido = 0;
 				
 
+	
 				ledelegido = (Integer.parseInt(Led57.getText())) - 1;
 				
 				if(ControladordeLeds(ledelegido)) {
@@ -1868,6 +1872,599 @@ public class InterfacePrincipal extends JFrame {
 	}
 	
 
+	private void EstadobyCapa(Capa tuCapa) {
+		
+		///LED1
+		
+		
+		if(tuCapa.getMisLed()[0]==true) {
+			System.out.println("VERDADERO");
+			Led1.setBackground(Color.WHITE);
+			Led1.setForeground(Color.BLACK);
+		}else {
+			System.out.println("f");
+			Led1.setForeground(Color.WHITE);
+			Led1.setBackground(Color.GRAY);
+		}
+		///LED2
+		if(tuCapa.getMisLed()[1]) {
+			Led2.setBackground(Color.WHITE);
+			Led2.setForeground(Color.BLACK);
+		}else {
+			int i =0;
+			Led2.setForeground(Color.WHITE);
+			Led2.setBackground(Color.GRAY);
+			
+		}
+		///LED3
+		if(tuCapa.getMisLed()[2]) {
+			Led3.setBackground(Color.WHITE);
+			Led3.setForeground(Color.BLACK);
+		}else {
+			Led3.setForeground(Color.WHITE);
+			Led3.setBackground(Color.GRAY);
+		}
+		///LED4
+		if(tuCapa.getMisLed()[3]) {
+			Led4.setBackground(Color.WHITE);
+			Led4.setForeground(Color.BLACK);
+		}else {
+			Led4.setForeground(Color.WHITE);
+			Led4.setBackground(Color.GRAY);
+		}
+		///LED5
+		if(tuCapa.getMisLed()[4]) {
+			Led5.setBackground(Color.WHITE);
+			Led5.setForeground(Color.BLACK);
+		}else {
+			Led5.setForeground(Color.WHITE);
+			Led5.setBackground(Color.GRAY);
+		}
+		///LED6
+		if(tuCapa.getMisLed()[5]) {
+			Led6.setBackground(Color.WHITE);
+			Led6.setForeground(Color.BLACK);
+		}else {
+			Led6.setForeground(Color.WHITE);
+			Led6.setBackground(Color.GRAY);
+		}
+		///LED7
+		if(tuCapa.getMisLed()[6]) {
+			Led7.setBackground(Color.WHITE);
+			Led7.setForeground(Color.BLACK);
+		}else {
+			Led7.setForeground(Color.WHITE);
+			Led7.setBackground(Color.GRAY);
+		}
+		///LED8
+		if(tuCapa.getMisLed()[7]) {
+			Led8.setBackground(Color.WHITE);
+			Led8.setForeground(Color.BLACK);
+		}else {
+			Led8.setForeground(Color.WHITE);
+			Led8.setBackground(Color.GRAY);
+		}
+		///LED9
+		if(tuCapa.getMisLed()[8]) {
+			Led9.setBackground(Color.WHITE);
+			Led9.setForeground(Color.BLACK);
+		}else {
+			Led9.setForeground(Color.WHITE);
+			Led9.setBackground(Color.GRAY);
+		}
+		///LED10
+		if(tuCapa.getMisLed()[9]) {
+			Led10.setBackground(Color.WHITE);
+			Led10.setForeground(Color.BLACK);
+		}else {
+			Led10.setForeground(Color.WHITE);
+			Led10.setBackground(Color.GRAY);
+		}
+		///LED11
+		if(tuCapa.getMisLed()[10]) {
+			Led11.setBackground(Color.WHITE);
+			Led11.setForeground(Color.BLACK);
+		}else {
+			Led11.setForeground(Color.WHITE);
+			Led11.setBackground(Color.GRAY);
+		}
+		///LED12
+		if(tuCapa.getMisLed()[11]) {
+			Led12.setBackground(Color.WHITE);
+			Led12.setForeground(Color.BLACK);
+		}else {
+			Led12.setForeground(Color.WHITE);
+			Led12.setBackground(Color.GRAY);
+		}
+		///LED13
+		if(tuCapa.getMisLed()[12]) {
+			Led13.setBackground(Color.WHITE);
+			Led13.setForeground(Color.BLACK);
+		}else {
+			Led13.setForeground(Color.WHITE);
+			Led13.setBackground(Color.GRAY);
+		}
+		///LED14
+		if(tuCapa.getMisLed()[13]) {
+			Led14.setBackground(Color.WHITE);
+			Led14.setForeground(Color.BLACK);
+		}else {
+			Led14.setForeground(Color.WHITE);
+			Led14.setBackground(Color.GRAY);
+		}
+		///LED15
+		if(tuCapa.getMisLed()[14]) {
+			Led15.setBackground(Color.WHITE);
+			Led15.setForeground(Color.BLACK);
+		}else {
+			Led15.setForeground(Color.WHITE);
+			Led15.setBackground(Color.GRAY);
+		}
+		///LED16
+		if(tuCapa.getMisLed()[15]) {
+			Led16.setBackground(Color.WHITE);
+			Led16.setForeground(Color.BLACK);
+		}else {
+			Led16.setForeground(Color.WHITE);
+			Led16.setBackground(Color.GRAY);
+		}
+		///LED17
+		if(tuCapa.getMisLed()[16]) {
+			Led17.setBackground(Color.WHITE);
+			Led17.setForeground(Color.BLACK);
+		}else {
+			Led17.setForeground(Color.WHITE);
+			Led17.setBackground(Color.GRAY);
+		}
+		///LED18
+		if(tuCapa.getMisLed()[17]) {
+			Led18.setBackground(Color.WHITE);
+			Led18.setForeground(Color.BLACK);
+		}else {
+			Led18.setForeground(Color.WHITE);
+			Led18.setBackground(Color.GRAY);
+		}
+		///LED19
+		if(tuCapa.getMisLed()[18]) {
+			Led19.setBackground(Color.WHITE);
+			Led19.setForeground(Color.BLACK);
+		}else {
+			Led19.setForeground(Color.WHITE);
+			Led19.setBackground(Color.GRAY);
+		}
+		///LED20
+		if(tuCapa.getMisLed()[19]) {
+			Led20.setBackground(Color.WHITE);
+			Led20.setForeground(Color.BLACK);
+		}else {
+			Led20.setForeground(Color.WHITE);
+			Led20.setBackground(Color.GRAY);
+		}
+		///LED21
+		if(tuCapa.getMisLed()[20]) {
+			Led21.setBackground(Color.WHITE);
+			Led21.setForeground(Color.BLACK);
+		}else {
+			Led21.setForeground(Color.WHITE);
+			Led21.setBackground(Color.GRAY);
+		}
+		///LED22
+		if(tuCapa.getMisLed()[21]) {
+			Led22.setBackground(Color.WHITE);
+			Led22.setForeground(Color.BLACK);
+		}else {
+			Led22.setForeground(Color.WHITE);
+			Led22.setBackground(Color.GRAY);
+		}
+		///LED23
+		if(tuCapa.getMisLed()[22]) {
+			Led23.setBackground(Color.WHITE);
+			Led23.setForeground(Color.BLACK);
+		}else {
+			Led23.setForeground(Color.WHITE);
+			Led23.setBackground(Color.GRAY);
+		}
+		///LED24
+		if(tuCapa.getMisLed()[23]) {
+			Led24.setBackground(Color.WHITE);
+			Led24.setForeground(Color.BLACK);
+		}else {
+			Led24.setForeground(Color.WHITE);
+			Led24.setBackground(Color.GRAY);
+		}
+		///LED25
+		if(tuCapa.getMisLed()[24]) {
+			Led25.setBackground(Color.WHITE);
+			Led25.setForeground(Color.BLACK);
+		}else {
+			Led25.setForeground(Color.WHITE);
+			Led25.setBackground(Color.GRAY);
+		}
+		///LED26
+		if(tuCapa.getMisLed()[25]) {
+			Led26.setBackground(Color.WHITE);
+			Led26.setForeground(Color.BLACK);
+		}else {
+			Led26.setForeground(Color.WHITE);
+			Led26.setBackground(Color.GRAY);
+		}
+		///LED27
+		if(tuCapa.getMisLed()[26]) {
+			Led27.setBackground(Color.WHITE);
+			Led27.setForeground(Color.BLACK);
+		}else {
+			Led27.setForeground(Color.WHITE);
+			Led27.setBackground(Color.GRAY);
+		}
+		///LED28
+		if(tuCapa.getMisLed()[27]) {
+			Led28.setBackground(Color.WHITE);
+			Led28.setForeground(Color.BLACK);
+		}else {
+			Led28.setForeground(Color.WHITE);
+			Led28.setBackground(Color.GRAY);
+		}
+		///LED29
+		if(tuCapa.getMisLed()[28]) {
+			Led29.setBackground(Color.WHITE);
+			Led29.setForeground(Color.BLACK);
+		}else {
+			Led29.setForeground(Color.WHITE);
+			Led29.setBackground(Color.GRAY);
+		}
+		///LED30
+		if(tuCapa.getMisLed()[29]) {
+			Led30.setBackground(Color.WHITE);
+			Led30.setForeground(Color.BLACK);
+		}else {
+			Led30.setForeground(Color.WHITE);
+			Led30.setBackground(Color.GRAY);
+		}
+		///LED31
+		if(tuCapa.getMisLed()[30]) {
+			Led31.setBackground(Color.WHITE);
+			Led31.setForeground(Color.BLACK);
+		}else {
+			Led31.setForeground(Color.WHITE);
+			Led31.setBackground(Color.GRAY);
+		}
+		///LED32
+		if(tuCapa.getMisLed()[31]) {
+			Led32.setBackground(Color.WHITE);
+			Led32.setForeground(Color.BLACK);
+		}else {
+			Led32.setForeground(Color.WHITE);
+			Led32.setBackground(Color.GRAY);
+		}
+		///LED33
+		if(tuCapa.getMisLed()[32]) {
+			Led33.setBackground(Color.WHITE);
+			Led33.setForeground(Color.BLACK);
+		}else {
+			Led33.setForeground(Color.WHITE);
+			Led33.setBackground(Color.GRAY);
+		}
+		///LED34
+		if(tuCapa.getMisLed()[33]) {
+			Led34.setBackground(Color.WHITE);
+			Led34.setForeground(Color.BLACK);
+		}else {
+			Led34.setForeground(Color.WHITE);
+			Led34.setBackground(Color.GRAY);
+		}
+		///LED35
+		if(tuCapa.getMisLed()[34]) {
+			Led35.setBackground(Color.WHITE);
+			Led35.setForeground(Color.BLACK);
+		}else {
+			Led35.setForeground(Color.WHITE);
+			Led35.setBackground(Color.GRAY);
+		}
+		///LED36
+		if(tuCapa.getMisLed()[35]) {
+			Led36.setBackground(Color.WHITE);
+			Led36.setForeground(Color.BLACK);
+		}else {
+			Led36.setForeground(Color.WHITE);
+			Led36.setBackground(Color.GRAY);
+		}
+		///LED37
+		if(tuCapa.getMisLed()[36]) {
+			Led37.setBackground(Color.WHITE);
+			Led37.setForeground(Color.BLACK);
+		}else {
+			Led37.setForeground(Color.WHITE);
+			Led37.setBackground(Color.GRAY);
+		}
+		///LED38
+		if(tuCapa.getMisLed()[37]) {
+			Led38.setBackground(Color.WHITE);
+			Led38.setForeground(Color.BLACK);
+		}else {
+			Led38.setForeground(Color.WHITE);
+			Led38.setBackground(Color.GRAY);
+		}
+		///LED39
+		if(tuCapa.getMisLed()[38]) {
+			Led39.setBackground(Color.WHITE);
+			Led39.setForeground(Color.BLACK);
+		}else {
+			Led39.setForeground(Color.WHITE);
+			Led39.setBackground(Color.GRAY);
+		}
+		///LED40
+		if(tuCapa.getMisLed()[39]) {
+			Led40.setBackground(Color.WHITE);
+			Led40.setForeground(Color.BLACK);
+		}else {
+			Led40.setForeground(Color.WHITE);
+			Led40.setBackground(Color.GRAY);
+		}
+		///LED41
+		if(tuCapa.getMisLed()[40]) {
+			Led41.setBackground(Color.WHITE);
+			Led41.setForeground(Color.BLACK);
+		}else {
+			Led41.setForeground(Color.WHITE);
+			Led41.setBackground(Color.GRAY);
+		}
+		///LED42
+		if(tuCapa.getMisLed()[41]) {
+			Led42.setBackground(Color.WHITE);
+			Led42.setForeground(Color.BLACK);
+		}else {
+			Led42.setForeground(Color.WHITE);
+			Led42.setBackground(Color.GRAY);
+		}
+		///LED43
+		if(tuCapa.getMisLed()[42]) {
+			Led43.setBackground(Color.WHITE);
+			Led43.setForeground(Color.BLACK);
+		}else {
+			Led43.setForeground(Color.WHITE);
+			Led43.setBackground(Color.GRAY);
+		}
+		///LED44
+		if(tuCapa.getMisLed()[43]) {
+			Led44.setBackground(Color.WHITE);
+			Led44.setForeground(Color.BLACK);
+		}else {
+			Led44.setForeground(Color.WHITE);
+			Led44.setBackground(Color.GRAY);
+		}		
+		///LED45
+		if(tuCapa.getMisLed()[44]) {
+			Led45.setBackground(Color.WHITE);
+			Led45.setForeground(Color.BLACK);
+		}else {
+			Led45.setForeground(Color.WHITE);
+			Led45.setBackground(Color.GRAY);
+		}
+		///LED46
+		if(tuCapa.getMisLed()[45]) {
+			Led46.setBackground(Color.WHITE);
+			Led46.setForeground(Color.BLACK);
+		}else {
+			Led46.setForeground(Color.WHITE);
+			Led46.setBackground(Color.GRAY);
+		}	
+		///LED47
+		if(tuCapa.getMisLed()[46]) {
+			Led47.setBackground(Color.WHITE);
+			Led47.setForeground(Color.BLACK);
+		}else {
+			Led47.setForeground(Color.WHITE);
+			Led47.setBackground(Color.GRAY);
+		}
+		///LED48
+		if(tuCapa.getMisLed()[47]) {
+			Led48.setBackground(Color.WHITE);
+			Led48.setForeground(Color.BLACK);
+		}else {
+			Led48.setForeground(Color.WHITE);
+			Led48.setBackground(Color.GRAY);
+		}	
+		///LED49
+		if(tuCapa.getMisLed()[48]) {
+			Led49.setBackground(Color.WHITE);
+			Led49.setForeground(Color.BLACK);
+		}else {
+			Led49.setForeground(Color.WHITE);
+			Led49.setBackground(Color.GRAY);
+		}	
+		///LED50
+		if(tuCapa.getMisLed()[49]) {
+			Led50.setBackground(Color.WHITE);
+			Led50.setForeground(Color.BLACK);
+		}else {
+			Led50.setForeground(Color.WHITE);
+			Led50.setBackground(Color.GRAY);
+		}
+		///LED51
+		if(tuCapa.getMisLed()[50]) {
+			Led51.setBackground(Color.WHITE);
+			Led51.setForeground(Color.BLACK);
+		}else {
+			Led51.setForeground(Color.WHITE);
+			Led51.setBackground(Color.GRAY);
+		}
+		///LED52
+		if(tuCapa.getMisLed()[51]) {
+			Led52.setBackground(Color.WHITE);
+			Led52.setForeground(Color.BLACK);
+		}else {
+			Led52.setForeground(Color.WHITE);
+			Led52.setBackground(Color.GRAY);
+		}
+		///LED53
+		if(tuCapa.getMisLed()[52]) {
+			Led53.setBackground(Color.WHITE);
+			Led53.setForeground(Color.BLACK);
+		}else {
+			Led53.setForeground(Color.WHITE);
+			Led53.setBackground(Color.GRAY);
+		}
+		///LED54
+		if(tuCapa.getMisLed()[53]) {
+			Led54.setBackground(Color.WHITE);
+			Led54.setForeground(Color.BLACK);
+		}else {
+			Led54.setForeground(Color.WHITE);
+			Led54.setBackground(Color.GRAY);
+		}
+		///LED55
+		if(tuCapa.getMisLed()[54]) {
+			Led55.setBackground(Color.WHITE);
+			Led55.setForeground(Color.BLACK);
+		}else {
+			Led55.setForeground(Color.WHITE);
+			Led55.setBackground(Color.GRAY);
+		}
+		///LED56
+		if(tuCapa.getMisLed()[55]) {
+			Led56.setBackground(Color.WHITE);
+			Led56.setForeground(Color.BLACK);
+		}else {
+			Led56.setForeground(Color.WHITE);
+			Led56.setBackground(Color.GRAY);
+		}
+		///LED57
+		if(tuCapa.getMisLed()[56]) {
+			Led57.setBackground(Color.WHITE);
+			Led57.setForeground(Color.BLACK);
+		}else {
+			Led57.setForeground(Color.WHITE);
+			Led57.setBackground(Color.GRAY);
+		}
+		///LED58
+		if(tuCapa.getMisLed()[57]) {
+			Led58.setBackground(Color.WHITE);
+			Led58.setForeground(Color.BLACK);
+		}else {
+			Led58.setForeground(Color.WHITE);
+			Led58.setBackground(Color.GRAY);
+		}
+		///LED59
+		if(tuCapa.getMisLed()[58]) {
+			Led59.setBackground(Color.WHITE);
+			Led59.setForeground(Color.BLACK);
+		}else {
+			Led59.setForeground(Color.WHITE);
+			Led59.setBackground(Color.GRAY);
+		}
+		///LED60
+		if(tuCapa.getMisLed()[59]) {
+			Led60.setBackground(Color.WHITE);
+			Led60.setForeground(Color.BLACK);
+		}else {
+			Led60.setForeground(Color.WHITE);
+			Led60.setBackground(Color.GRAY);
+		}
+		///LED61
+		if(tuCapa.getMisLed()[60]) {
+			Led61.setBackground(Color.WHITE);
+			Led61.setForeground(Color.BLACK);
+		}else {
+			Led61.setForeground(Color.WHITE);
+			Led61.setBackground(Color.GRAY);
+		}
+		///LED62
+		if(tuCapa.getMisLed()[61]) {
+			Led62.setBackground(Color.WHITE);
+			Led62.setForeground(Color.BLACK);
+		}else {
+			Led62.setForeground(Color.WHITE);
+			Led62.setBackground(Color.GRAY);
+		}
+		///LED63
+		if(tuCapa.getMisLed()[62]) {
+			Led63.setBackground(Color.WHITE);
+			Led63.setForeground(Color.BLACK);
+		}else {
+			Led63.setForeground(Color.WHITE);
+			Led63.setBackground(Color.GRAY);
+		}
+		///LED64
+		if(tuCapa.getMisLed()[63]) {
+			Led64.setBackground(Color.WHITE);
+			Led64.setForeground(Color.BLACK);
+		}else {
+			Led64.setForeground(Color.WHITE);
+			Led64.setBackground(Color.GRAY);
+		}
+
+
+	}
+
+public static void CargarComboBox() {
+			
+		if(miCubo.getMisAnimaciones().isEmpty()) {
+		comboBoxAnimaciones.addItem("No Existe Ninguna Animacion");
+		}
+		else {
+			comboBoxAnimaciones.removeAllItems();
+			
+			for(int i = 0; i<miCubo.getMisAnimaciones().size(); i++) {
+			comboBoxAnimaciones.addItem(miCubo.getMisAnimaciones().get(i).getNombre());
+			}
+		}
+		
+	}
+
+
+public boolean ControladordeLeds(int LedElegido) {
+		boolean estado = false;
+		int capaElegida = 0;
+		
+		capaElegida = comboBox.getSelectedIndex();
+		
+		if(!miCapa[capaElegida].getMisLed()[LedElegido]) {
+			miCapa[capaElegida].modificadorLed(LedElegido);
+			estado = true;
+		}else {
+			miCapa[capaElegida].modificadorLed(LedElegido);;
+			estado = false;
+		}
+		
+		return estado;
+	}
+	
+	
+	public void cargaCapabyAnimacion() {
+		String name = "";
+		int select = 0;
+		
+		select = comboBox.getSelectedIndex();
+		
+		name = comboBoxAnimaciones.getSelectedItem().toString();
+		
+		int y = 0;
+		y=miCubo.getMisAnimaciones().size();
+		for (int i = 0; i < y; i++) {
+			if(miCubo.getMisAnimaciones().get(i).getNombre().equalsIgnoreCase(name)) {
+				Animacion aux = miCubo.getMisAnimaciones().get(i);
+				cargarCapa(aux, select);
+			}
+			
+		}
+		
+		
+	}
+
+	private void cargarCapa(Animacion aux, int selecion) {
+
+		for (int i = 0; i <8; i++) {
+			if(i==selecion) {
+				EstadobyCapa(aux.getCapas()[i]);
+			} else {
+				
+			}
+		} 
+		
+	
+	}
+	
+	
 	private void EstadoDeLeds() {
 		
 		///LED1
@@ -2385,37 +2982,4 @@ public class InterfacePrincipal extends JFrame {
 
 
 	}
-
-public static void CargarComboBox() {
-			
-		if(miCubo.getMisAnimaciones().isEmpty()) {
-		comboBoxAnimaciones.addItem(" No Existe Ninguna Animacion");
-		}
-		else {
-			comboBoxAnimaciones.removeAllItems();
-			
-			for(int i = 0; i<miCubo.getMisAnimaciones().size(); i++) {
-			comboBoxAnimaciones.addItem(miCubo.getMisAnimaciones().get(i).getNombre());
-			}
-		}
-		
 	}
-
-
-	boolean ControladordeLeds(int LedElegido) {
-		boolean estado = false;
-		int capaElegida = 0;
-		
-		capaElegida = comboBox.getSelectedIndex();
-		
-		if(!miCapa[capaElegida].getMisLed()[LedElegido]) {
-			miCapa[capaElegida].modificadorLed(LedElegido);
-			estado = true;
-		}else {
-			miCapa[capaElegida].modificadorLed(LedElegido);;
-			estado = false;
-		}
-		
-		return estado;
-	}
-}

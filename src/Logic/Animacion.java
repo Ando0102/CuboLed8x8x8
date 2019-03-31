@@ -38,5 +38,11 @@ public class Animacion {
 		this.capas = capas;
 	}
 	
-	
+/*	public void ingresarCapas(Capa[] capas) {
+		
+		for(int i = 0; i<8; i++) {
+			this.capas[i] = capas[i];
+		}
+	}
+*/	
 }

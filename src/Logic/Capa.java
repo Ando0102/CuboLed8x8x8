@@ -7,6 +7,9 @@ public class Capa {
 	public Capa() {
 		super();
 		this.misLed = new boolean[64];
+		for (int i = 0; i < 64; i++) {
+			misLed[i] = false;
+		}
 	}
 
 	public boolean[] getMisLed() {
